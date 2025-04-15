@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Na's Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .hero {
+      background: linear-gradient(to right, #4f46e5, #9333ea);
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+    }
+    .projects .card {
+      transition: transform 0.3s;
+    }
+    .projects .card:hover {
+      transform: translateY(-5px);
+    }
+    footer {
+      background-color: #111827;
+      color: white;
+      padding: 40px 0;
+    }
+    .footer-links a {
+      color: #ccc;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    .footer-links a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+      text-align: center;
+    }
+    .footer-grid a {
+      color: #ccc;
+      text-decoration: none;
+      display: block;
+      padding: 5px 0;
+    }
+    .footer-grid a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+    .intro-section {
+      background-color: #f8f9fa;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .intro-section h2 {
+      font-size: 2rem;
+    }
+    .intro-section p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+    .portfolio-intro {
+      background-color: #fffbea;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .portfolio-intro h2 {
+      font-size: 2rem;
+      color: #4b0082;
+    }
+    .portfolio-intro p {
+      font-size: 1.1rem;
+      color: #444;
+    }
+    .floating-connect-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1050;
+      background: #4f46e5;
+      color: white;
+      border-radius: 50px;
+      padding: 12px 20px;
+      font-weight: 500;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: background 0.3s ease;
+      text-decoration: none;
+    }
+    .floating-connect-button:hover {
+      background: #3730a3;
+      color: #fff;
+    }
+    .skills-container {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      margin-top: 40px;
+    }
+    .skills-slider {
+      display: flex;
+      animation: slide 30s linear infinite;
+    }
+    .skill-icon {
+      flex-shrink: 0;
+      width: 100px;
+      margin: 10px;
+      text-align: center;
+    }
+    .skill-icon img {
+      width: 100%;
+      height: auto;
+    }
+    @keyframes slide {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    .skill-item {
+      text-align: center;
+    }
+    .skill-item img {
+      height: 40px;
+      margin-bottom: 10px;
+    }
+    .skill-item span {
+      display: block;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1 class="display-4 fw-bold">Hi, I'm Srinivas Erramalla – Turning Ideas into Digital Reality ✨</h1>
+    <p class="lead mt-3">A passionate full-stack developer crafting modern, interactive, and elegant web experiences.</p>
+    <a href="#projects" class="btn btn-light mt-4">Explore My Work</a>
+  </section>
+
+  <!-- Portfolio Introduction Section -->
+  <section class="portfolio-intro">
+    <h2>More Than Just Code — It’s Craftsmanship</h2>
+    <p>My portfolio is a reflection of my commitment to clean code, seamless user experience, and purposeful design. Each project is a chapter of my journey in learning, building, and innovating across technologies.</p>
+  </section>
+
+  <!-- Introduction Section -->
+  <section class="intro-section">
+    <h2>Welcome to My Creative Space</h2>
+    <p>Where innovation meets functionality. Explore my diverse portfolio of intelligent solutions, robust applications, and meaningful designs that bridge ideas and impact.</p>
+  </section>
+
+  <!-- About Section -->
+  <section class="container py-5" id="about">
+    <h2 class="text-center mb-4">About Me</h2>
+    <p class="text-center">I’m an aspiring full-stack developer with a strong passion for building meaningful and impactful software. My journey started with Java and expanded into cloud, machine learning, and full-stack development.</p>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="container py-5" id="skills">
+    <h2 class="text-center mb-4">Skills & Technologies</h2>
+    <div class="skills-container">
+      <div class="skills-slider">
+        <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java"><span>Java</span></div>
+        <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"><span>Python</span></div>
+        <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript"><span>JavaScript</span></div>
+        <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C"><span>C Programming</span></div>
+        <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL"><span>MySQL</span></div>
+        <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask"><span>Flask</span></div>
+        <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL"><span>PostgreSQL</span></div>
+        <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap"><span>Bootstrap</span></div>
+        <div class="skill-icon"><img src="https://img.icons8.com/color/48/000000/power-bi.png" alt="Power BI"><span>Power BI</span></div>
+        <div class="skill-icon"><img src="https://img.icons8.com/fluency/48/ms-excel.png" alt="Excel"><span>MS Excel</span></div>
+        <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git"><span>Git</span></div>
+        <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"><span>GitHub</span></div>
+
+        <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy"><span>NumPy</span></div>
+        <div class="skill-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas"><span>Pandas</span></div>
+
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Projects Section -->
+  <section class="projects py-5 bg-light" id="projects">
+  <h2 class="text-center mb-4">My Projects</h2>
+    <div class="container">
+      <h2 class="text-center mb-5">Projects</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">The Genre Lab</h5>
+              <p class="card-text">An Intelligent Music Genre Classifier powered by Deep Learning</p>
+              <p class="text-muted small">Tech Stack: Python, Flask, Librosa, pydub</p>
+	      <a href="https://github.com/Srinivas-Vid/The-Genre-Lab---Music-Genre-Classification" target="_blank">View Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Invoice Management</h5>
+              <p class="card-text">Java JDBC-based invoice tracking system.</p>
+              <p class="text-muted small">Tech Stack: Java, MySQL</p>
+	      <a href="https://github.com/Srinivas-Vid/" target="_blank">View Project</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title">Gen Z Chatbot</h5>
+              <p class="card-text">AI chatbot for emotional support and resource recommendations.</p>
+              <p class="text-muted small">Tech Stack: Python, Streamlit</p>
+	      <a href="https://github.com/Srinivas-Vid/Implementation-of-Chatbot-using-NLP" target="_blank">View Project</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="container py-5" id="contact">
+    <h2 class="text-center mb-4">Let's Connect</h2>
+    <form class="mx-auto bg-white p-4 rounded shadow" style="max-width: 600px;" onsubmit="sendMessage(event)">
+      <div class="mb-3 d-flex align-items-center">
+        <span class="me-2 fs-5 text-primary"><i class="bi bi-person-fill"></i></span>
+        <input type="text" class="form-control" name="name" placeholder="Your Name" required />
+      </div>
+      <div class="mb-3 d-flex align-items-center">
+        <span class="me-2 fs-5 text-primary"><i class="bi bi-envelope-fill"></i></span>
+        <input type="email" class="form-control" name="email" placeholder="Your Email" required />
+      </div>
+      <div class="mb-3 d-flex align-items-start">
+        <span class="me-2 fs-5 text-primary mt-1"><i class="bi bi-chat-left-text-fill"></i></span>
+        <textarea class="form-control" name="message" rows="4" placeholder="Your Message" required></textarea>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary px-4 py-2 fw-semibold" style="box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: background 0.3s ease;">
+          <i class="bi bi-send-fill me-2"></i>Send Message
+        </button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Floating Connect Button -->
+  <a href="#contact" class="floating-connect-button">Let’s Connect</a>
+
+  <!-- Footer -->
+  <footer class="text-center footer-enhanced">
+    <div class="container">
+      <p class="mb-1">&copy; 2025 Srinivas. All Rights Reserved.</p>
+      <p class="small">Built with ❤️ using HTML, CSS, JS & Bootstrap</p>
+      <div class="footer-grid">
+        <a href="mailto:srinivaserramalla5@gmail.com">📧 Email</a>
+        <a href="https://www.linkedin.com/in/srinivaserramalla" target="_blank">💼 LinkedIn</a>
+        <a href="https://github.com/Srinivas-Vid" target="_blank">🐙 GitHub</a>
+        <a href="https://twitter.com/na_dev" target="_blank">🐦 Twitter</a>
+        <a href="https://medium.com/@na-dev" target="_blank">📝 Blog</a>
+        <a href="/Infoane.pdf" target="_blank">📄 Resume</a>
+        <a href="https://www.buymeacoffee.com/na.dev" target="_blank">☕ Support My Work</a>
+        <a href="https://na-portfolio.dev/newsletter" target="_blank">📬 Newsletter</a>
+      </div>
+      <p class="mt-4">Designed to inspire creativity and demonstrate engineering excellence — from frontend polish to backend logic.</p>
+    </div>
+  </footer>
+
+ <a href="mailto:na@example.com" class="floating-connect-button">
+    <i class="bi bi-envelope-fill"></i> Contact Me
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Skill sliding animation
+    let slideIndex = 0;
+    function slideSkills() {
+      const skills = document.getElementById("skills-slide");
+      const skillCount = skills.children.length;
+      slideIndex = (slideIndex + 1) % skillCount;
+      skills.style.transform = `translateX(-${slideIndex * 100}%)`;
+    }
+    setInterval(slideSkills, 3000); // Slide every 3 seconds
+<script>
+  // Surprise dialog with a quote every refresh
+  window.onload = function() {
+    const quotes = [
+      "Technology is best when it brings people together. - Matt Mullenweg",
+      "The science of today is the technology of tomorrow. - Edward Teller",
+      "It has become appallingly obvious that our technology has exceeded our humanity. - Albert Einstein",
+      "Technology is a useful servant but a dangerous master. - Christian Lous Lange",
+      "Programs must be written for people to read, and only incidentally for machines to execute. - Harold Abelson",
+      "Code is like humor. When you have to explain it, it’s bad. - Cory House",
+      "The best way to predict the future is to invent it. - Alan Kay",
+      "In programming, the hard part isn’t solving problems, but deciding what problems to solve. - Paul Graham",
+      "First, solve the problem. Then, write the code. - John Johnson",
+      "The function of good software is to make the complex appear to be simple. - Grady Booch",
+      "It’s not a bug — it’s an undocumented feature. - Anonymous",
+      "Talk is cheap. Show me the code. - Linus Torvalds",
+      "Good code is its own best documentation. - Steve McConnell",
+      "Simplicity is the soul of efficiency. - Austin Freeman",
+      "Programs are meant to be read by humans and only incidentally for computers to execute. - Donald Knuth",
+      "When in doubt, use brute force. - Ken Thompson",
+      "Software is a great combination of artistry and engineering. - Bill Gates",
+      "Code never lies, comments sometimes do. - Ron Jeffries",
+      "To be a great programmer, it’s not enough to just know the syntax. You need to have a strong foundation of algorithms and problem-solving. - Anonymous",
+      "The best error message is the one that never shows up. - Thomas Fuchs",
+      "Fail fast, fail often, fail cheap. - Anonymous",
+      "Code is like a mirror; it reflects the coder’s mindset. - Anonymous",
+      "Software engineering is the part of engineering that deals with the design and development of software. - Anonymous",
+      "The hardest part of design is keeping features out. - Don Norman",
+      "The only way to learn a new programming language is by writing programs in it. - Dennis Ritchie",
+      "The most disastrous thing that you can ever learn is your first programming language. - Alan Kay",
+      "Debugging is like being the detective in a crime movie where you are also the murderer. - Filipe Fortes",
+      "Simplicity is the ultimate sophistication. - Leonardo da Vinci",
+      "There are only two hard things in computer science: cache invalidation and naming things. - Phil Karlton",
+      "Code that is written once and works forever is a fairy tale. - Anonymous",
+      "An algorithm must be seen to be believed. - Donald Knuth",
+      "Computers are fast; programmers keep it slow. - Anonymous",
+      "The most important property of a program is whether it accomplishes the intention of its user. - Robert C. Martin",
+      "The computer was born to solve problems that did not exist before. - Bill Gates",
+      "The purpose of software engineering is to control complexity, not to create it. - Pamela Zave",
+      "Coding is not just about writing code; it’s about solving problems and making life easier. - Anonymous",
+      "If you can’t explain it simply, you don’t understand it well enough. - Albert Einstein",
+      "The best way to get started is to quit talking and begin doing. - Walt Disney",
+      "Don’t worry if it doesn’t work right. If everything did, you’d be out of a job. - Mosher’s Law of Software Engineering",
+      "In programming, the most important thing is to maintain a clean environment for learning and growth. - Anonymous",
+      "It’s not the code that’s hard, it’s deciding how to structure it. - Anonymous",
+      "There’s always a way to do things better, find it. - Thomas Edison",
+      "Any fool can write code that a computer can understand. Good programmers write code that humans can understand. - Martin Fowler",
+      "The problem with troubleshooting is that the universe is always changing. - Anonymous",
+      "An essential part of learning to code is learning how to break things. - Anonymous",
+      "Software is never finished, only released. - Anonymous",
+      "Code is poetry. - WordPress Slogan",
+      "I’m not a great programmer; I’m just a good programmer with great habits. - Kent Beck",
+      "Programming is not about typing, it’s about thinking. - Rich Hickey",
+      "The key to performance is elegance, not battalions of special cases. - Jon Bentley",
+      "Don’t write better code, write better software. - Anonymous",
+      "Good programmers use their brains, not their muscles. - Robert C. Martin",
+      "A good programmer is someone who always looks both ways before crossing a one-way street. - Anonymous",
+      "Great software comes from great programming practices. - Anonymous",
+      "The real problem is not whether machines think but whether men do. - B.F. Skinner",
+      "You can’t make good software without learning how to make mistakes. - Anonymous",
+      "Programming is the art of thinking for computers, but software engineering is the art of thinking for humans. - Anonymous",
+      "Quality means doing it right when no one is looking. - Henry Ford",
+      "Code is like a garden. It grows and changes over time. - Anonymous",
+      "A great developer is not someone who can write the most code but someone who can solve problems with the least amount of code. - Anonymous",
+      "A programming language is a set of rules, which govern the combination of symbols to create meaningful expressions. - Anonymous",
+      "Programming is like building with Legos. - Anonymous",
+      "The beauty of code is in its simplicity. - Anonymous",
+      "We are always a step away from realizing the potential of programming. - Anonymous",
+      "Software engineering is the discipline of developing software in the best possible way given the constraints. - Anonymous",
+      "Code is like humor; it’s good when it works, but when it doesn’t, it’s a disaster. - Anonymous",
+      "It’s not about having the right opportunities. It’s about handling the opportunities right. - Mark Cuban",
+      "Success is a lousy teacher. It seduces smart people into thinking they can’t lose. - Bill Gates",
+      "Technology is a word that describes something that doesn’t work yet. - Douglas Adams",
+      "If you think your users are idiots, only idiots will use it. - Linus Torvalds",
+      "Programming is like solving a puzzle. The more you solve, the more you become hooked. - Anonymous",
+      "Learning to code is like learning a language. - Anonymous",
+      "The best programming language is the one you know. - Anonymous",
+      "The world is a computer and its users are the programmers. - Anonymous",
+      "We don’t just code for functionality; we code for scalability, performance, and readability. - Anonymous",
+      "Computer programming is an art, and like all art, it requires passion and dedication. - Anonymous",
+      "Programming can be done by anyone, but building great software requires an experienced programmer. - Anonymous",
+      "Code is a living, breathing thing that needs constant care and attention. - Anonymous",
+      "Building software is easy; building good software is hard. - Anonymous",
+      "To me, programming is more than just a job; it’s a passion. - Anonymous"
+    ];
+    const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+    alert(randomQuote);
+  };
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</script>
+
+  </body>
+</html>
